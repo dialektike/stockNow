@@ -1,5 +1,8 @@
 import scrollphathd as sphd
 
-for y in range(7):
-    sphd.set_pixel(1, y, 0.25)
-sphd.show()
+sphd.write_string('Shiver me timbers!')
+
+while True:
+    sphd.show()
+    sphd.scroll(1)
+    time.sleep(0.05)
