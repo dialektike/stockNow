@@ -1,6 +1,9 @@
 import scrollphathd as sphd
 import time
 
+sphd.set_brightness(0.5)
+sphd.rotate(degrees= 180)
+    
 sphd.write_string('Shiver me timbers!')
 
 while True:
