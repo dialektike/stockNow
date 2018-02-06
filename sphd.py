@@ -1,4 +1,5 @@
 import scrollphathd as sphd
+import time
 
 sphd.write_string('Shiver me timbers!')
 
