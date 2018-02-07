@@ -30,10 +30,6 @@ def showMeKosdaqSise():
 sphd.set_brightness(0.5)
 sphd.rotate(degrees= 180)
 
-stockString = ' '
-
-sphd.write_string(stockString, font=font5x7)
-
 while True:
     sphd.show()
     sphd.scroll(1)
@@ -49,11 +45,18 @@ while True:
         temp_kosdaq = showMeKosdaqSise()
         KOSPI = temp_KOSPI[0]
         kosdaq = temp_KOSPI[0]
-        print("%s, %s:%s Now"%(temp_time.day,temp_time.hour, temp_time.minute))
-    
+        #print("%s, %s:%s Now"%(temp_time.day,temp_time.hour, temp_time.minute))
+        temp_time_string = ("%s.%s %s:%s Now "%(temp_time.month,temp_time.day,temp_time.hour, temp_time.minute))
+        #print(temp_time_string)
+        
         if ((KOSPI != temp_KOSPI) or (kosdaq != temp_kosdaq)):
             KOSPI = temp_KOSPI
             kosdaq = temp_kosdaq
-            print("KOSPI: %s(%s) KOSDAQ: %s(%s)" %(temp_KOSPI[0],temp_KOSPI[1], temp_kosdaq[0],temp_kosdaq[1]))
-
+            #print("KOSPI: %s(%s) KOSDAQ: %s(%s)" %(temp_KOSPI[0],temp_KOSPI[1], temp_kosdaq[0],temp_kosdaq[1]))
+            temp_stock_string =("KOSPI: %s( %s) KOSDAQ: %s( %s)" %(temp_KOSPI[0],temp_KOSPI[1], temp_kosdaq[0],temp_kosdaq[1]))
+            #print(temp_stock_string)
+            #print(temp_time_string,temp_stock_string)
+            stockString = temp_time_string + temp_stock_string
+            sphd.write_string(stockString, font=font5x7) 
+    
     temp = temp_time.minute
