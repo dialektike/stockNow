@@ -29,6 +29,8 @@ def showMeKosdaqSise():
 
 sphd.set_brightness(0.5)
 sphd.rotate(degrees= 180)
+stockString = ""
+sphd.write_string(stockString, font=font5x7)
 
 while True:
     sphd.show()
@@ -57,7 +59,8 @@ while True:
             #print(temp_stock_string)
             #print(temp_time_string,temp_stock_string)
             stockString = temp_time_string + temp_stock_string
-            sphd.clear()
-            sphd.write_string(stockString, font=font5x7) 
-    
+
+        sphd.clear()
+        sphd.write_string(stockString, font=font5x7)
+ 
     temp = temp_time.minute
