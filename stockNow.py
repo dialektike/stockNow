@@ -57,6 +57,7 @@ while True:
             #print(temp_stock_string)
             #print(temp_time_string,temp_stock_string)
             stockString = temp_time_string + temp_stock_string
+            sphd.clear()
             sphd.write_string(stockString, font=font5x7) 
     
     temp = temp_time.minute
