@@ -5,8 +5,6 @@ from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 
-temp = 70
-
 def showMeKospiSise():
     soup_sise = requests.get("http://finance.naver.com/sise/")
     soup_sise_BF = BeautifulSoup(soup_sise.text, "html.parser")
@@ -32,13 +30,15 @@ sphd.rotate(degrees= 180)
 stockString = ""
 sphd.write_string(stockString, font=font5x7)
 
+temp = 70
+KOSPI = '0'
+kosdaq = '0'
+
 while True:
     sphd.show()
     sphd.scroll(1)
     time.sleep(0.1)
 
-    KOSPI = '0'
-    kosdaq = '0'
     temp_time = datetime.now()
     
     if (temp != datetime.now().minute):
