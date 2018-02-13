@@ -18,6 +18,6 @@ if __name__ == '__main__':
     
     col = 60
     
-    puts(columns([(colored.red('Column 1')), col], [(colored.green('Column Two')), None],
+    puts(columns([(colored.red('삼성전자(Ks)')), col], [(colored.green('Column Two')), None],
                     [(colored.magenta('Column III')), col]))
-    puts(columns(['hi there my name is kenneth and this is a columns', col], [lorem, None], ['kenneths', col]))
+    puts(columns(['hitw 정 here my name is kenneth and this is a columns', col], [lorem, None], ['정재환.', col]))
