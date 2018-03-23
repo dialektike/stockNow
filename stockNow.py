@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 def showMeKospiSise():
     soup_sise = requests.get("http://finance.naver.com/sise/")
-    soup_sise_BF = BeautifulSoup(soup_sise.text, "html.parser")
+    soup_sise_BF = BeautifulSoup(soup_sise.text, "lxml")
     temp = soup_sise_BF.find_all('ul')[6]
     temp1 = temp.find_all('span')[1].text
     temp2 = temp.find_all('span')[2].text
@@ -17,7 +17,7 @@ def showMeKospiSise():
 
 def showMeKosdaqSise():
     soup_sise = requests.get("http://finance.naver.com/sise/")
-    soup_sise_BF = BeautifulSoup(soup_sise.text, "html.parser")
+    soup_sise_BF = BeautifulSoup(soup_sise.text, "lxml")
     temp = soup_sise_BF.find_all('ul')[6]
     temp1 = temp.find_all('span')[6].text
     temp2 = temp.find_all('span')[2].text
