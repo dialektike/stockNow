@@ -11,6 +11,7 @@ requests = "*"
 "bs4" = "*"
 clint = "*"
 ansi = "*"
+lxml = "*"
 
 
 [dev-packages]
