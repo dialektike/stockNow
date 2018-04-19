@@ -12,6 +12,7 @@ requests = "*"
 clint = "*"
 ansi = "*"
 lxml = "*"
+redis = "*"
 
 
 [dev-packages]
